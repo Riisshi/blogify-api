@@ -1,5 +1,10 @@
 const express = require("express");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
 const postRoutes = require("./routes/post.routes.js");
+
+dotenv.config();        // Load .env
+connectDB();            // Connect to MongoDB
 
 const app = express();
 
